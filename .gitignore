@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.pyenv
+
+# SQLMap output
+sqlmap_output/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Results file (optional - you may want to track this)
+# sqlmap_results.txt
