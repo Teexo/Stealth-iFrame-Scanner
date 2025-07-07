@@ -36,6 +36,11 @@ cd stealth-iframe-scanner
 # Install dependencies
 pip install -r requirements.txt
 
+
 # Install ChromeDriver (Linux example)
 sudo apt update
 sudo apt install chromium-chromedriver
+
+#Usage
+python3 stealth_iframe_scanner.py
+
