@@ -43,4 +43,44 @@ sudo apt install chromium-chromedriver
 
 #Usage
 python3 stealth_iframe_scanner.py
+When prompted, enter the target URL (must start with http:// or https://).
+
+
+Example workflow:
+
+-Tool scans the target page for iframes
+
+-Identifies iframes with parameters
+
+-Prompts to test each vulnerable-looking iframe
+
+-Executes SQLmap with optimal stealth settings
+
+-Saves results to ~/sqlmap_results.txt
+
+Configuration
+Edit these variables in the script:
+
+RESULTS_FILE = os.path.join(HOME_DIR, "sqlmap_results.txt")  # Output file
+USER_AGENT = "Mozilla/5.0 (...)"  # Default user agent
+SCAN_DELAY = random.uniform(1.5, 3.5)  # Anti-detection delay
+
+
+Sample Output:
+
+Enter target URL: https://example.com/vulnerable-page
+
+[+] Scanning: https://example.com/vulnerable-page
+[+] Found 3 iframe(s)
+
+1. iframe URL: https://example.com/app?id=123
+[*] Found parameters in iframe URL
+Test with SQLmap? (y/n): y
+
+[*] Running SQLmap command: sqlmap -u 'https://...' --batch --random-agent...
+[✓] Results saved to /home/user/sqlmap_results.txt
+
+
+
+
 
